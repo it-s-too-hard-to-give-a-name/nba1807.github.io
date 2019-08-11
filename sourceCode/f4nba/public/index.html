@@ -4,9 +4,20 @@
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+=======
+    <!-- 绕过防盗链 -->
+    <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1341584_cfjqhnvht8.css">
+>>>>>>> b7e17cb48e5f4712d6f4e8956e17796f433a40dc
     <meta name="theme-color" content="#000000" />
+    <meta name="referrer" content="no-referrer" />
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,19 +35,20 @@
     <title>React App</title>
     <script>
       // 750设计稿为例
-      (function (doc, win) {
-              var docEl = doc.documentElement,
-              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-              recalc = function () {
-                  var clientWidth = docEl.clientWidth;
-                  if (!clientWidth) return;
-                  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
-              };
-              if (!doc.addEventListener) return;
-              win.addEventListener(resizeEvt, recalc, false);
-              doc.addEventListener('DOMContentLoaded', recalc, false);
-          })(document, window);
-      </script>
+      (function(doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt =
+            "orientationchange" in window ? "orientationchange" : "resize",
+          recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+          };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+      })(document, window);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
