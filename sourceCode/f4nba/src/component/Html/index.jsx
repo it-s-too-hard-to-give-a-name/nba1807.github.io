@@ -21,14 +21,14 @@ export default class Html extends Component {
           <Route path="/signin" component={Signin} />
           <Route path="/zc" component={Zc} />
           <Route path="/ditail" component={Ditail} />
-          <Route path="/Dlsy" component={Shouye} />
+          {/* <Route path="/Dlsy" component={Shouye} /> */}
           <Route path="/detail" component={Detail} />
           <Route path="/search" component={Search} />
           <Route path="/xiazai" component={Xiazai} />
           <Route path="/home11" component={Shou} />
           <Route path="/home10" component={Shouye} />
           <Route path="/home2" component={() => <div>121</div>} />
-          <Redirect exact from="/" to="/home/tuijian" />
+          <Redirect exact from="/" to="/home/tuijian"/>
 
           {/* <Redirect to="/home3" /> */}
         </Switch>

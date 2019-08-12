@@ -4,7 +4,6 @@ import api from'../api/index.js';
 import {NavLink} from 'react-router-dom';
 import tool from '../tool/tool.js'
 
-import Dlsy from '../z-h-html'
 export default class Html extends Component {
     constructor(){
         super()
@@ -27,7 +26,7 @@ export default class Html extends Component {
              alert(data.msg)
              window.location.replace('/signin')
              // alert('登陆成功')
-             window.location.replace('/Dlsy')
+             window.location.replace('/home10')
          } else {
              // console.log(this.state.errcount)
              alert(data.msg)

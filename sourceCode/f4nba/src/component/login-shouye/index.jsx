@@ -69,7 +69,7 @@ export default class Shouye extends Component {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/home2" activeClassName="link-nav">
+                  <NavLink to="/home/tuijian" activeClassName="link-nav">
                     退出账号
                   </NavLink>
                 </li>

@@ -66,7 +66,7 @@ export default class Search extends Component {
                             <input placeholder='搜索知乎内容' />
                         </div>
                     </NavLink>
-                    <NavLink to='/home'>
+                    <NavLink to='/home10'>
                         <div className='zh-sea-del'>
                             <span>取消</span>
                         </div>
