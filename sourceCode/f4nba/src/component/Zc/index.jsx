@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './index.scss';
-import api from'../api/index.js'
-
+import tool from '../tool/tool.js'
 export default class Zc extends Component {
     constructor(){
         super()
@@ -17,25 +16,20 @@ export default class Zc extends Component {
         })
         // console.log(target.value)
     }
-    onSubmit=()=>{
-        // api.LOGIN('http://localhost:3003/login',this.state).then(res=>{
-        //     console.log(res)
-        //     const {phone,password,checkbox} = res;
-        //     if (!phone===this.state.phone) {
-        //         alert('请输入正确格式的手机号')
-        //         return false
-        //     }
-        //     if (!password===this.state.password) {
-        //         alert('请输入正确的密码')
-        //         return false
-        //     }
-        //     if (!(checkbox === this.state.checkBox)) {
-        //         alert("请记住登录状态");
-        //         return false;
-        //       } else {
-        //         alert("登陆成功！");
-        //       }
-        // })
+    onSubmit=(pandName='zc')=>{
+        // console.log(pandName)
+        let data = tool(this.state,pandName)
+
+        if (data.status) {
+            console.log('这个时候 我们可以去请求登录接口')
+            alert(data.msg)
+            window.location.replace('/signin')
+            // alert('登陆成功')
+            // window.location.replace('/登录')
+        } else {
+            // console.log(this.state.errcount)
+            alert(data.msg)
+        }
     }
     render() {
         return (
@@ -77,7 +71,7 @@ export default class Zc extends Component {
                                 <label className='zc-label'>
                                     <button 
                                     type='button'
-                                    onClick={this.onSubmit}>
+                                    onClick={()=>this.onSubmit('zc')}>
                                         注册
                                     </button>
                                 </label>

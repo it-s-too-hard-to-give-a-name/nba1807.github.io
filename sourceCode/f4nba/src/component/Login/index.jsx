@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './index.scss';
-import api from'../api/index.js'
+import api from'../api/index.js';
 import {NavLink} from 'react-router-dom';
 export default class Html extends Component {
     constructor(){
@@ -17,8 +17,8 @@ export default class Html extends Component {
         // console.log(target.value)
     }
     onSubmit=()=>{
-        api.LOGIN('http://localhost:3003/login',this.state).then(res=>{
-            console.log(res)
+        api.LOGIN('http://localhost:8088/login',this.state).then(res=>{
+            // console.log(res)
             // return false
             const {phone,yzm} = res;
             console.log(phone===this.state.phone)
@@ -68,8 +68,8 @@ export default class Html extends Component {
                              placeholder='请输入六位验证码'/>
                             <div><button onClick={this.alert1}>发送验证码</button></div>
                         </label>
-                        <p className='text-p-login'><a href="#">未注册手机验证后会自动登录</a></p>
-                        <p className='text-p-login1'><a href="#">注册即同意《知乎协议》《隐秘保护指引》</a></p>
+                        <p className='text-p-login'><a href="https://www.zhihu.com/terms">未注册手机验证后会自动登录</a></p>
+                        <p className='text-p-login1'><a href="https://www.zhihu.com/terms">注册即同意《知乎协议》《隐秘保护指引》</a></p>
                         <label className='login-box'>
                             <button className='login-box-btn'
                             type='button'
@@ -82,7 +82,7 @@ export default class Html extends Component {
                 <a className='b' href="https://www.zhihu.com/account/appeal">需要帮助</a>
               </div>
                 <div className='login-bottom-two'>
-                    <a href="#">社交账号登录</a>
+                    <a href="https://www.zhihu.com/term/privacy">社交账号登录</a>
                     <NavLink to='zc'>注册机构账号</NavLink>
                 </div>
             </div>
