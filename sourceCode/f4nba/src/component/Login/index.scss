@@ -28,7 +28,7 @@
 
  .inputbox{
     width: 90%;
-    height: 650px;
+    height: 730px;
     margin: 5%;
     font-size: 20px;
     overflow: hidden;
@@ -100,6 +100,7 @@
         text-align: center;
         a{
             color: gray;
+            border: none;
         }
     }
     .text-p-login1{
@@ -108,6 +109,7 @@
         color: gray;
         a{
             color: gray;
+            border: none;
         }
     }
     .login-box{
@@ -135,10 +137,12 @@
         padding-left: 20px;
             color: gray;
             text-decoration: none;
+            border: none;
     }
     .b{
         padding-right: 20px;
         text-align: right;
+            border: none;
             color: gray;
             font-size: 10px;
         text-decoration: none;
@@ -151,6 +155,7 @@
             display: block;
             font-size:35px;
             margin-top: 10px;
+            border: none;
             text-decoration: none;
             color: gray;
             text-align: center;

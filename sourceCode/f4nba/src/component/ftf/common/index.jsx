@@ -10,7 +10,7 @@ export default class Common extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:8088/zhihu").then(res => {
+    axios.get("http://192.168.36.115:8088/zhihu").then(res => {
       this.setState(() => {
         return res.data;
       });

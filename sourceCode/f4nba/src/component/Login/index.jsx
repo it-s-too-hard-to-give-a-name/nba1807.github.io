@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './index.scss';
 import api from'../api/index.js';
 import {NavLink} from 'react-router-dom';
+import tool from '../tool/tool.js'
+
+import Dlsy from '../z-h-html'
 export default class Html extends Component {
     constructor(){
         super()
@@ -16,24 +19,19 @@ export default class Html extends Component {
         })
         // console.log(target.value)
     }
-    onSubmit=()=>{
-        api.LOGIN('http://localhost:8088/login',this.state).then(res=>{
-            // console.log(res)
-            // return false
-            const {phone,yzm} = res;
-            console.log(phone===this.state.phone)
-
-            if (!(phone===this.state.phone)) {
-                alert('请输入正确的手机号')
-                return false
-            }
-             else if (!(yzm===this.state.yzm)) {
-                alert('请输入正确的密码')
-                return false
-            }else {
-                alert("登陆成功！");
-              }
-        })
+    onSubmit=(pandName='dl')=>{
+         // console.log(pandName)
+         let data = tool(this.state,pandName)
+         if (data.status) {
+             console.log('这个时候 我们可以去请求登录接口')
+             alert(data.msg)
+             window.location.replace('/signin')
+             // alert('登陆成功')
+             window.location.replace('/Dlsy')
+         } else {
+             // console.log(this.state.errcount)
+             alert(data.msg)
+         }
     }
     alert1=()=>{
         alert('验证码为123456')
@@ -73,7 +71,7 @@ export default class Html extends Component {
                         <label className='login-box'>
                             <button className='login-box-btn'
                             type='button'
-                             onClick={this.onSubmit}>登录</button>
+                             onClick={()=>this.onSubmit('dl')}>登录</button>
                         </label>
                     </form>
                 </div>

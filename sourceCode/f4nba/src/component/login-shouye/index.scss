@@ -1,0 +1,172 @@
+.flex {
+  display: flex;
+  &.flex-bw {
+    justify-content: space-between;
+  }
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #858585;
+  background: #ffffff;
+  width: 100%;
+  display: block;
+  padding: 20px 0px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.link-box {
+  width: 100%;
+  height: 100vh;
+  // background-color: rgba(26, 26, 26, 0.65);
+  z-index: 99999;
+  position: absolute;
+  top: 150px;
+  font-size: 60px;
+}
+.link-box1 {
+  width: 100%;
+  height: 370px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.link-box2 {
+  width: 700px;
+  height: 100%px;
+  background: #ffffff;
+  margin: 0px auto;
+}
+.link-nav {
+  width: 100%;
+  display: block;
+  padding: 20px 0px;
+}
+
+.zh-header {
+  display: flex;
+  // justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  width: 100vw;
+  height: 120px;
+  .zh-logo {
+    position: relative;
+    width: 150px;
+    height: 120px;
+    img {
+      position: absolute;
+      top: 2%;
+      left: 14px;
+    }
+  }
+  .zh-sea {
+    background-color: hsla(0, 0%, 92.2%, 0.72);
+    width: 280px;
+    height: 70px;
+    color: #999;
+    margin: 10px -70px 0;
+    font-size: 15px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 16%;
+      left: 20px;
+    }
+    p {
+      position: absolute;
+      width: 20%;
+      top: 25%;
+      left: 70px;
+      font-size: 27px;
+    }
+  }
+  .zh-xia {
+    .zh-xia-img {
+      height: 80px;
+      padding-right: 20px;
+      border-right: 1px solid #eee;
+      float: left;
+    }
+  }
+  .zh-meau {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    z-index: 9999;
+    .zh-meau-img {
+      position: absolute;
+      top: 40%;
+      left: -30px;
+    }
+  }
+}
+.xia-box-box {
+  width: 100%;
+  position: relative;
+  .flex {
+    display: flex;
+    &.flex-bw {
+      justify-content: space-between;
+    }
+  }
+  .zh-header {
+    display: flex;
+    // justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    width: 100vw;
+    height: 120px;
+    .zh-logo {
+      position: relative;
+      width: 150px;
+      height: 120px;
+      img {
+        position: absolute;
+        top: 20%;
+        left: 14px;
+      }
+    }
+    .zh-sea {
+      background-color: hsla(0, 0%, 92.2%, 0.72);
+      width: 280px;
+      height: 70px;
+      color: #999;
+      margin: 30px 12px 0;
+      font-size: 15px;
+      border-radius: 40px;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 16%;
+        left: 20px;
+      }
+      p {
+        position: absolute;
+        width: 20%;
+        top: 25%;
+        left: 70px;
+        font-size: 27px;
+      }
+    }
+    .zh-xia {
+      .zh-xia-img {
+        height: 80px;
+        padding-right: 20px;
+        border-right: 1px solid #eee;
+      }
+    }
+    .zh-meau {
+      position: relative;
+      width: 100px;
+      height: 120px;
+      .zh-meau-img {
+        position: absolute;
+        top: 40%;
+        left: 20px;
+      }
+    }
+  }
+}

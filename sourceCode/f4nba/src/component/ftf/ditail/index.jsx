@@ -8,8 +8,8 @@ export default class Ditail extends Component {
     this.state = {};
   }
   componentDidMount() {
-    const id = this.props.history.location.state.id;
-    axios.get("http://localhost:8088/ditail", { params: { id } }).then(res => {
+    const id = this.props.hist
+    axios.get("http://192.168.36.115:8088/ditail", { params: { id } }).then(res => {
       this.setState(() => {
         return res.data;
       });

@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const https = require("https");
+
 const os = require("os");
 function getIPAdress(os) {
   var interfaces = os.networkInterfaces();
@@ -20,7 +21,7 @@ function getIPAdress(os) {
 }
 const IPv4 = getIPAdress(os);
 app.listen(8088, () =>
-  console.log("服务:http://localhost:8088;本机ip" + IPv4)
+  console.log("服务：http://localhost:8088；本机ip" + IPv4)
 );
 
 const bodyParser = require("body-parser");
@@ -85,25 +86,3 @@ app.get("/ditail", (req, respoens) => {
       });
   });
 });
-app.post('*',(req,res)=>{
-  // req.path请求的地址
-  console.log(req.body)
-  switch(req.path){
-      case '/login':
-  const data = require('./json/qq.json');
-          // Object.keys(req.body).length?res.json(data):res.json(req.body)
-          if (req.body.phone&&req.body.yzm) {
-              res.json(data);
-          }else{
-              res.json({
-                  type:"err"
-              })
-          }
-          break;
-          default:
-      res.json('404')
-  }
-  // console.log(req.body);
-  // console.log(res);
-  // res.json(req.body)
-})
